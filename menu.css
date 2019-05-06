@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "montserrat", sans-serif;
+}
+
+.header {
+    height: 100px;
+    background: #00cec9;
+    padding: 0 200px;
+    color: #fff;
+}
+
+.logo {
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+}
+
+.menu {
+    float: right;
+    line-height: 100px;
+}
+
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: rigth;
+}
+.show-menu-btn i {
+    /* line-height: 行间距
+    number 设置数字，此数字会与当前的字体尺寸相乘来设置行间距。 
+    length 设置固定的行间距。 
+    % 基于当前字体尺寸的百分比行间距。 */
+    line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: #6c5ce7;
+}
+
+#chk {
+    position: absolute;
+    /* visibility: 属性规定元素是否可见。
+    visible 默认值。元素是可见的。 
+    hidden 元素是不可见的。 
+    collapse 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。 */
+    visibility: hidden;
+    /* z-index: 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+    auto 默认。堆叠顺序与父元素相等。 
+    number 设置元素的堆叠顺序。 */
+    z-index: -1111;
+}
+
+.centent {
+    padding: 0px;
+}
+
+.centent img {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0;
+}
+
+.centent p {
+    /* text-align: 属性规定元素中的文本的水平对齐方式。
+    left 把文本排列到左边。默认值：由浏览器决定。 
+    right 把文本排列到右边。 
+    center 把文本排列到中间。 
+    justify 实现两端对齐文本效果。 */
+    text-align: justify;
+}
+
+/* @media: 针对不同的媒体类型定义不同的样式。
+all 用于所有设备
+print 用于打印机和打印预览
+screen 用于电脑屏幕，平板电脑，智能手机等。 
+speech 应用于屏幕阅读器等发声设备 */
+@media screen and (max-width: 800px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        /* left: 0px; */
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a {
+        /* display 属性规定元素应该生成的框的类型。
+        none 此元素不会被显示。 
+        block 此元素将显示为块级元素，此元素前后会带有换行符。 
+        inline 默认。此元素会被显示为内联元素，元素前后没有换行符。 
+        inline-block 行内块元素。(CSS2.1 新增的值)
+        list-item 此元素会作为列表显示。 */
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu-btn {
+        /* 绝对位置: top 距离网页上/右边距: 40px*/
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    /* 只有在checkbox被勾选之后(也就是用户点击之后),动画效果才会开始 */
+    #chk:checked ~ .menu {
+        right: 0px;
+    }
+}
