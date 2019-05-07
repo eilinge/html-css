@@ -9,7 +9,7 @@ body {
   repeat-x:横向平铺 
   repeat-y:纵向平铺 */
   background: url(./img/bg.jpg) no-repeat;
-  /* background-size 属性规定背景图像的尺寸
+  /* background-size: 属性规定背景图像的尺寸
   length 设置背景图像的高度和宽度。 第一个值设置宽度，第二个值设置高度。 如果只设置一个值，则第二个值会被设置为 "auto"。
   percentage 以父元素的百分比来设置背景图像的宽度和高度。 第一个值设置宽度，第二个值设置高度。 如果只设置一个值，则第二个值会被设置为 "auto"。
   cover 把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。 背景图像的某些部分也许无法显示在背景定位区域中。
@@ -27,7 +27,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。 
+  /* transform: 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。 
   translate(x, y) 定义 2D 转换。
   translate3d(x, y, z)
   */
@@ -38,7 +38,7 @@ body {
 .login-box h1{
   float: left;
   font-size: 40px;
-  /* 设置一个声明中所有底部边框属性。 可以设置的属性分别（按顺序）：border-bottom-width, border-bottom-style, 和border-bottom-color.
+  /* border-bottom: 设置一个声明中所有底部边框属性。 可以设置的属性分别（按顺序）：border-bottom-width, border-bottom-style, 和border-bottom-color.
   dotted: 定义一个点线边框 
   dashed: 定义一个虚线边框 
   solid: 定义实线边框 
